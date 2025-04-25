@@ -14,7 +14,8 @@ const CalculatorCard = () => {
 
   const handleCalculate = async () => {
     try {
-      const res = await axios.post("http://127.0.0.1:8001/calculate", {
+      // const res = await axios.post("http://http://127.0.0.1:8000/calculate",{
+        const res = await axios.post("http://204.48.22.252:8001/calculate", {
         days_since_conception: days,
       });
       setResult(res.data);
