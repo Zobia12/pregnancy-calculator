@@ -4,18 +4,22 @@ import Results from "./Results";
 import axios from "axios";
 
 const CalculatorCard = () => {
-  const [days, setDays] = useState(71);
+  const [days, setDays] = useState(0);
   const [result, setResult] = useState(null);
 
   const handleChange = (e) => {
     const newDays = Number(e.target.value);
-    setDays(newDays);
+    if (newDays >= 0 && newDays <= 280) {
+      setDays(newDays);
+    }
+    else{
+      setDays(280);
+    }
   };
-
   const handleCalculate = async () => {
     try {
-      // const response = await axios.post('http://127.0.0.1:5172/calculate', {
-      const response = await axios.post('http://204.48.22.252:5172/calculate', {
+      const response = await axios.post('http://127.0.0.1:5172/calculate', {
+      // const response = await axios.post('http://204.48.22.252:5172/calculate', {
 
         days_since_conception: Number(days),
       });
