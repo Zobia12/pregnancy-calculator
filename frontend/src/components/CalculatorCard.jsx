@@ -14,16 +14,21 @@ const CalculatorCard = () => {
 
   const handleCalculate = async () => {
     try {
-      // const res = await axios.post("http://http://127.0.0.1:8000/calculate",{
-        const res = await axios.post("http://204.48.22.252:8001/calculate", {
-        days_since_conception: days,
+      // const response = await axios.post('http://127.0.0.1:5172/calculate', {
+      const response = await axios.post('http://204.48.22.252:5172/calculate', {
+
+        days_since_conception: Number(days),
       });
-      setResult(res.data);
+  
+      if (!response.status===200) {
+        throw new Error('Network response was not ok');
+      }
+      setResult(response.data);
     } catch (err) {
       console.error("Error calling backend:", err);
     }
   };
-
+  
   return (
     <div className="flex flex-col md:flex-row gap-12 w-full max-w-5xl">
       <div className="flex-1">
