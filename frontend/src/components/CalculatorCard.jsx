@@ -18,8 +18,15 @@ const CalculatorCard = () => {
     const cycle = cycleLength ? Number(cycleLength) : 28;
     const adjustment = cycle - 28;
   
-    lmp.setDate(lmp.getDate() + 280 + adjustment);
-    setDueDate(lmp.toDateString());
+   lmp.setDate(lmp.getDate() + 280 + adjustment);
+    const formattedDate = lmp.toLocaleDateString("en-US", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  
+    setDueDate(formattedDate);
   };
   
   return (
