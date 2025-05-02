@@ -6,9 +6,9 @@ import axios from "axios";
 
 const CalculatorCard = () => {
   const [days, setDays] = useState(0);
-  const [apiResult, setApiResult] = useState(null); // For API response
-  const [lmpDate, setLmpDate] = useState("");
-  const [dueDate, setDueDate] = useState(null);     // For LMP-based date
+  const [apiResult, setApiResult] = useState(null); 
+  const [lmpDate, setLmpDate] = useState(new Date());
+  const [dueDate, setDueDate] = useState(null);
   const [cycleLength, setCycleLength] = useState(28);
 
   const calculateDueDateFromLMP = () => {
@@ -33,7 +33,6 @@ const CalculatorCard = () => {
     <div className="flex flex-col md:flex-row gap-12 w-full max-w-5xl">
       <div className="flex-1">
         <Header />
-
         <div className="mb-6">
           <LMPInput lmpDate={lmpDate} setLmpDate={setLmpDate} setCycleLength={setCycleLength} cycleLength={cycleLength}/>
           <br />
