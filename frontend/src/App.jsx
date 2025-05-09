@@ -17,9 +17,7 @@ const App = () => {
         <Route
           path="/embed"
           element={
-            <div className="min-h-screen flex items-center justify-center p-4">
               <EmbedCalculator />
-            </div>
           }
         />
       </Routes>
