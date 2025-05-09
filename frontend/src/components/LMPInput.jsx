@@ -15,6 +15,8 @@ const CustomInput = React.forwardRef(({ value, onClick }, ref) => (
       <FaRegCalendarAlt className="text-gray-500 ml-2" />
     </button>
   </div>
+
+  
 ));
 
 const LMPInput = ({ lmpDate, setLmpDate, setCycleLength, cycleLength , hTextColor}) => {
