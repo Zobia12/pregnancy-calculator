@@ -44,12 +44,17 @@ const Results = ({ result, dueDate ,textColor, resultBgColor, hTextColor}) => {
 
 
           <div className="mt-4 bg-yellow-100 p-4 rounded">
-          <h3 className="text-lg font-bold mb-2 text-gray-800">What Now?</h3>
-          <ul className="list-disc ml-5 text-base text-gray-800">
-            <li>Consider your options with a pregnancy or pre-abortion screening appointment</li>
-            <li>Planning to parent? Find support here</li>
-          </ul>
-        </div>
+            <h3 className="text-lg font-bold mb-2 text-gray-800">What Now?</h3>
+            <ul className="list-disc ml-5 text-base text-gray-800 space-y-2">
+              <li>
+                The most accurate way to determine your due date is through an ultrasound. 
+                <strong> Consider booking a free appointment</strong> to confirm your pregnancy and get the clarity you need.
+              </li>
+              <li>Thinking through your options? A pregnancy or pre-abortion screening can help you plan your next steps.</li>
+              {/* <li>Planning to parent? <a href="#" className="text-blue-600 underline">Find local support resources here</a>.</li> */}
+            </ul>
+          </div>
+
           {/* // <div className="mb-6">
           //   <p className="text-sm text-gray-600">
           //     This is your estimated due date based on your last menstrual period.
