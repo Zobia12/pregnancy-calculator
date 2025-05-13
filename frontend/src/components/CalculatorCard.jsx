@@ -45,7 +45,6 @@ const CalculatorCard = ({ embedMode = false, hTextColor:embedHTextColor, textCol
     <div
       className={`w-full p-4 ${embedMode ? 'flex flex-col md:flex-row gap-12 max-w-5xl mx-auto' : 'flex flex-col md:flex-row gap-12 max-w-6xl mx-auto'}`}
     >
-      {/* Left Column - Embed Config */}
       {!embedMode && (
         <div className="md:w-1/3">
           <div className="rounded-xl shadow-lg p-6 bg-white">

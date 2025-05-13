@@ -42,7 +42,7 @@ const LMPInput = ({ lmpDate, setLmpDate, setCycleLength, cycleLength , hTextColo
 
       <div className="flex flex-col gap-2">
         <label htmlFor="cycleLength" className="font-semibold " style={{ color: hTextColor }}>
-          Average Length of Cycles
+          Average Length of Cycle
         </label>
         <input
           id="cycleLength"
