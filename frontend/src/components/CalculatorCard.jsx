@@ -8,7 +8,7 @@ const CalculatorCard = ({ embedMode = false, hTextColor:embedHTextColor, textCol
   bgColor: embedBgColor, btnColor: embedBtnColor }) => {
   const [days, setDays] = useState(0);
   const [apiResult, setApiResult] = useState(null); 
-  const [lmpDate, setLmpDate] = useState(new Date());
+  const [lmpDate, setLmpDate] = useState(null);
   const [dueDate, setDueDate] = useState(null);
   const [cycleLength, setCycleLength] = useState(28);
   const [textColor, setTextColor] = useState("#3b4f42");
